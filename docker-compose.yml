@@ -10,33 +10,46 @@ services:
       - ./src:/var/www/
     depends_on:
       - php
+    networks:
+      - app-network
 
   php:
     build: ./docker/php
     volumes:
       - ./src:/var/www/
+    networks:
+      - app-network
 
   mysql:
-    image: mysql:8.0.26
+    image: arm64v8/mysql:8.0
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: laravel_db
       MYSQL_USER: laravel_user
       MYSQL_PASSWORD: laravel_pass
-    command:
-      mysqld --default-authentication-plugin=mysql_native_password
+    command: 
+      - mysqld
+      - --default-authentication-plugin=mysql_native_password
     volumes:
       - ./docker/mysql/data:/var/lib/mysql
       - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+    networks:
+      - app-network
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin
+    image: arm64v8/phpmyadmin:latest   
     environment:
-      - PMA_ARBITRARY=1
       - PMA_HOST=mysql
-      - PMA_USER=laravel_user
-      - PMA_PASSWORD=laravel_pass
+      - PMA_PORT=3306
+      - MYSQL_ROOT_PASSWORD=root
+      - UPLOAD_LIMIT=300M
+    ports:
+      - "8080:80"
     depends_on:
       - mysql
-    ports:
-      - 8080:80
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
