@@ -495,7 +495,7 @@ dialog {
     height: fit-content;
     border: solid;
     background-color: white;
-    color: black;
+    color: #8B7969;
 }
 
 dialog:not([open]) {

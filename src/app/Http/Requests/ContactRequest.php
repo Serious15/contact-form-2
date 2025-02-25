@@ -26,12 +26,12 @@ class ContactRequest extends FormRequest
         return [
             'first_name' => ['required', 'string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
-            'gender' => ['required', 'tinyint']
+            'gender' => ['required'],
             'email' => ['required', 'string', 'email', 'max:255'],
             'tel' => ['required', 'numeric', 'digits_between:10,11'],
             'address' => ['required', 'string', 'max:255'],
             'building' => ['required', 'string', 'max:255'],
-            'detail' => ['required', 'text'],
+            'detail' => ['required'],
         ];
     }
     public function messages()

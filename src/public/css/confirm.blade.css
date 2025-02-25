@@ -1,34 +1,39 @@
 .header {
-    background: #8B7969;
+    background: #ffffff;
 }
 
 .header__inner {
     margin: 0 auto;
-    padding: 20px 15px;
+    padding: 0 auto;
     max-width: 1512px;
+    max-height: 100px;
 }
 
 .header__logo {
     color: #8B7969;
     text-decoration: none;
     font-weight: bold;
-    font-size: 982px;
+    font-size: 40px;
+    text-align: center;
 }
 
-.confirm__content {
+.contact-form__content {
     margin: 0 auto;
-    padding: 30px 15px;
-    max-width: 1230px;
+    padding: 0 auto;
+    max-width: 121px;
+    max-height: 46px;
 }
 
-.confirm__heading {
-    margin-bottom: 40px;
+.contact-form__heading {
+    margin-bottom: 35px;
     text-align: center;
 }
 
 .form {
     margin: 0 auto;
-    width: 70%;
+    width: 97%;
+    height: 61%;
+    text-align: center;
 }
 
 .confirm-table {
@@ -65,16 +70,15 @@
 
 .form__button {
     margin-top: 30px;
-    text-align: center;
 }
 
 .form__button-submit {
     padding: 10px;
-    width: 30%;
-    height: 50px;
+    width: 972px;
+    height: 606px;
     border: none;
-    border-radius: 3px;
-    background: #8B7969;
+    border-radius: px;
+    background: #ffffff;
     color: #8B7969;
     cursor: pointer;
 }

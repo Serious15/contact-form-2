@@ -8,13 +8,13 @@
     <title>FashionablyLate</title>
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/thanks.css') }}" />
+
 </head>
 
 <body>
     <header class="header">
         <div class="header__inner">
             <a class="header__logo" href="/">
-                FashionablyLate
             </a>
         </div>
     </header>

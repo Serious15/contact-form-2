@@ -1,27 +1,30 @@
 .header {
-    background: #8B7969;;
+    background: #ffffff;;
 }
 
 .header__inner {
     margin: 0 auto;
-    padding: 20px 15px;
-    max-width: 1230px;
+    padding: 66px 66px;
+    max-width: 1381px;
+    max-height: 365px;
 }
 
 .header__logo {
     color: #8B7969;
     text-decoration: none;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 280px;
 }
 
 .thanks__content {
     margin: 0 auto;
-    padding: 30px 15px;
-    max-width: 1512px;
+    padding: 66px 66px;
+    max-width: 1381px;
+    max-height: 365px;
 }
 
 .thanks__heading {
     margin-bottom: 40px;
+    line-height: 319px;
     text-align: center;
 }

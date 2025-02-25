@@ -14,7 +14,6 @@
     <header class="header">
         <div class="header__inner">
             <a class="header__logo" href="/">
-                FashionablyLate
             </a>
         </div>
     </header>
@@ -22,6 +21,7 @@
     <main>
         <div class="contact-form__content">
             <div class="contact-form__heading">
+                <h1>FashionablyLate</h1>
                 <h2>Contact</h2>
             </div>
             <form class="form" action="/contacts/confirm" method="post">
@@ -33,19 +33,13 @@
                     <div class="form__group-content">
                         <div class="form__input--text">
                             <input type="text" name="first_name" placeholder="山田" value="{{ old('first_name') }}" />
-                        </div>
-                        <div class="form__error">
-                            @error('name')
-                            {{ $message }}
-                            @enderror
-                        </div>
-                    </div>
-                    <div class="form__group-content">
-                        <div class="form__input--text">
                             <input type="text" name="last_name" placeholder="太郎" value="{{ old('last_name') }}" />
                         </div>
                         <div class="form__error">
-                            @error('name')
+                            @error('first_name')
+                            {{ $message }}
+                            @enderror
+                            @error('last_name')
                             {{ $message }}
                             @enderror
                         </div>
@@ -60,7 +54,7 @@
                             <input type="tinyint" name="gender" placeholder="1:男性,2;女性,3:その他" value="{{ old('gender') }}" />
                         </div>
                         <div class="form__error">
-                            @error('name')
+                            @error('gender')
                             {{ $message }}
                             @enderror
                         </div>
@@ -72,10 +66,10 @@
                     </div>
                     <div class="form__group-content">
                         <div class="form__input--text">
-                            <input type="varchar" name="email" placeholder="test@example.com" value="{{ old('email') }}" />
+                            <input type="email" name="email" placeholder="test@example.com" value="{{ old('email') }}" />
                         </div>
                         <div class="form__error">
-                            @error('name')
+                            @error('email')
                             {{ $message }}
                             @enderror
                         </div>
@@ -87,10 +81,10 @@
                     </div>
                     <div class="form__group-content">
                         <div class="form__input--text">
-                            <input type="varchar" name="tel" placeholder="08012345678" value="{{ old('tel') }}" />
+                            <input type="tel" name="tel" placeholder="08012345678" value="{{ old('tel') }}" />
                         </div>
                         <div class="form__error">
-                            @error('name')
+                            @error('tel')
                             {{ $message }}
                             @enderror
                         </div>
@@ -102,10 +96,10 @@
                     </div>
                     <div class="form__group-content">
                         <div class="form__input--text">
-                            <input type="varchar" name="address" placeholder="例:東京都渋谷区千駄ヶ谷1-2-3" value="{{ old('address') }}" />
+                            <input type="address" name="address" placeholder="例:東京都渋谷区千駄ヶ谷1-2-3" value="{{ old('address') }}" />
                         </div>
                         <div class="form__error">
-                            @error('name')
+                            @error('address')
                             {{ $message }}
                             @enderror
                         </div>
@@ -117,10 +111,10 @@
                     </div>
                     <div class="form__group-content">
                         <div class="form__input--text">
-                            <input type="varchar" name="building" placeholder="例:千駄ヶ谷マンション101" value="{{ old('building') }}" />
+                            <input type="building" name="building" placeholder="例:千駄ヶ谷マンション101" value="{{ old('building') }}" />
                         </div>
                         <div class="form__error">
-                            @error('name')
+                            @error('building')
                             {{ $message }}
                             @enderror
                         </div>
@@ -135,7 +129,7 @@
                             <input type="text" name="detail" placeholder="選択してください" value="{{ old('detail') }}" />
                         </div>
                         <div class="form__error">
-                            @error('name')
+                            @error('detail')
                             {{ $message }}
                             @enderror
                         </div>
