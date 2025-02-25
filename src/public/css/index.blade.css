@@ -1,0 +1,86 @@
+.header {
+    background: #8B7969;
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 20px 15px;
+    max-width: 1512px;
+}
+
+.header__logo {
+    color: #8B7969;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 100px;
+}
+
+.contact-form__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 121px;
+}
+
+.contact-form__heading {
+    margin-bottom: 46px;
+    text-align: center;
+}
+
+.form {
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+}
+
+.form__group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form__label--required {
+    margin-left: 26px;
+    padding: 18px 18px;
+    border-radius: 38px;
+    background: #8B7969;
+    color: #8B7969;
+}
+
+.form__error {
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
+}
+
+.form__input--text input,
+.form__input--textarea textarea {
+    padding: 10px;
+    width: 972px;
+    border: 1px solid #8B7969;
+    border-radius: 3px;
+
+    appearance: none;
+}
+
+.form__input--text input {
+    height: 40px;
+}
+
+.form__input--textarea textarea {
+    height: 180px;
+}
+
+.form__button {
+    margin-top: 30px;
+}
+
+.form__button-submit {
+    padding: 10px;
+    width: 30%;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    background: #8B7969;
+    color: #8B7969;
+    cursor: pointer;
+}
